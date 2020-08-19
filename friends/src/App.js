@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./App.css";
-import Login from "./components/Login";
+import LoginForm from "./components/LoginForm";
 import PrivateRoute from "./components/PrivateRoute"
 import FriendsList from "./components/FriendsList"
 
@@ -22,12 +22,13 @@ function App() {
         </ul>
         <Switch>
           <PrivateRoute exact path="/protected" component={FriendsList} />
-          <Route path="/login" component={Login} />
+          <Route path="/login" component={LoginForm} />
           <Route>
-            <Login />
+            <LoginForm />
           </Route>
         </Switch>
       </div>
+      
     </Router>
   );
 }
